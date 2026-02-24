@@ -22,14 +22,14 @@ Time Complexity: O(n log n)  (sorting)
 Space Complexity: O(1) or O(n) depending on sort implementation
 """
 
-def minimum_arrows_burst_ballon(ballons):
-    if not ballons:
+def minimum_arrows_burst_balloon(balloons):
+    if not balloons:
         return 0
-    ballons = sorted(ballons,key=lambda x:x[1])
-    arrow = ballons[0][1]
+    balloons = sorted(balloons,key=lambda x:x[1])
+    arrow = balloons[0][1]
     number_of_arrows = 1
 
-    for start, end in ballons[1:]:
+    for start, end in balloons[1:]:
         if start > arrow:
             arrow = end
             number_of_arrows += 1
